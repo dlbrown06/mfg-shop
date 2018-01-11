@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+import constants from "../config/constants";
+
+const { MFG_SHOP_API } = constants.SERVICES;
 
 class App extends Component {
   render() {
@@ -13,6 +17,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>Shop Floor API: '{MFG_SHOP_API}'</p>
       </div>
     );
   }
