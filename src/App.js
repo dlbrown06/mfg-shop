@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import constants from "../config/constants";
+import constants from "./config/constants";
 
 const { MFG_SHOP_API } = constants.SERVICES;
 
