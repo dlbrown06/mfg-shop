@@ -22,7 +22,8 @@
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "node_modules/.bin/eslint ./config ./src ./public --fix"
+    "lint": "node_modules/.bin/eslint ./config ./src ./public --fix",
+    "deploy": "npm run copy-src-files && npm run build-css && npm run build && node app.js"
   },
   "devDependencies": {
     "eslint": "^4.15.0",
