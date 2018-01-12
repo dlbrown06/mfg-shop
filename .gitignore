@@ -6,6 +6,8 @@
 # dependencies
 /node_modules
 
+src/**/*.css
+
 # testing
 /coverage
 

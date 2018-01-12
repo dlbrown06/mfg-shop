@@ -2,15 +2,44 @@
   "name": "mfg-shop",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "6.10.x",
+    "npm": "3.10.x"
+  },
   "dependencies": {
+    "bootstrap": "^4.0.0-beta.3",
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "express-bearer-token": "^2.1.1",
+    "font-awesome": "^4.7.0",
+    "helmet": "^3.9.0",
+    "lodash": "^4.17.4",
+    "morgan": "^1.9.0",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.17",
+    "reactstrap": "^5.0.0-alpha.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "node_modules/.bin/eslint app.js ./server ./config ./src ./public --fix",
+    "deploy": "npm run build-css && npm run build && node app.js"
+  },
+  "proxy": "http://localhost:3001",
+  "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "prettier": "^1.10.2"
   }
 }
