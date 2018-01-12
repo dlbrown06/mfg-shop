@@ -1,0 +1,21 @@
+.AppContent {
+  margin-left: 240px;
+  overflow: hidden;
+
+  &-body {
+    margin-bottom: 60px;
+    margin-top: 70px;
+    padding: 20px 5px 15px 5px;
+  }
+
+  footer {
+    background-color: #f9f9f9;
+    bottom: 0;
+    color: #58666e;
+    text-align: left !important;
+    padding: 20px 30px;
+    position: absolute;
+    right: 0;
+    left: 240px;
+  }
+}

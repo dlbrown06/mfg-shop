@@ -1,0 +1,45 @@
+.NavMain {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+
+  &-left {
+    float: left;
+    position: relative;
+    width: 240px;
+    z-index: 1;
+    background-color: #343c49;
+
+    &>.logo {
+      color: #ffffff !important;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      line-height: 70px;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &>.navbar-custom {
+    background-color: #343c49;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0 10px 0 0;
+    margin-left: 240px;
+    min-height: 70px;
+
+    .nav-link {
+      color: #cecece;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
