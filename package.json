@@ -2,6 +2,10 @@
   "name": "mfg-shop",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "6.10.x",
+    "npm": "3.10.x"
+  },
   "dependencies": {
     "bootstrap": "^4.0.0-beta.3",
     "compression": "^1.7.1",
@@ -12,6 +16,7 @@
     "lodash": "^4.17.4",
     "morgan": "^1.9.0",
     "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
@@ -30,6 +35,7 @@
     "lint": "node_modules/.bin/eslint app.js ./server ./config ./src ./public --fix",
     "deploy": "npm run build-css && npm run build && node app.js"
   },
+  "proxy": "http://localhost:3001",
   "devDependencies": {
     "eslint": "^4.15.0",
     "eslint-config-prettier": "^2.9.0",
