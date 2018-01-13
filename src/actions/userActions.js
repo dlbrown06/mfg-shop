@@ -3,15 +3,7 @@
  */
 
 // We import constants to name our actions' type
-import {
-  USER_CHANGE_FORM,
-  USER_SET_AUTH,
-  USER_SENDING_REQUEST,
-  USER_LOGIN_REQUEST,
-  USER_LOGOUT,
-  USER_REQUEST_ERROR,
-  USER_CLEAR_ERROR
-} from "../config/actionTypes";
+import * as types from "../config/actionTypes";
 
 /**
  * Sets the form state
@@ -20,7 +12,7 @@ import {
  * @param  {string} newFormState.password The new text of the password input field of the form
  */
 export function changeForm(newFormState) {
-  return { type: USER_CHANGE_FORM, newFormState };
+  return { type: types.USER_CHANGE_FORM, newFormState };
 }
 
 /**
@@ -28,7 +20,7 @@ export function changeForm(newFormState) {
  * @param  {boolean} newAuthState True means a user is logged in, false means no user is logged in
  */
 export function setAuthState(newAuthState) {
-  return { type: USER_SET_AUTH, newAuthState };
+  return { type: types.USER_SET_AUTH, newAuthState };
 }
 
 /**
@@ -36,7 +28,7 @@ export function setAuthState(newAuthState) {
  * @param  {boolean} sending True means we're sending a request, false means we're not
  */
 export function sendingRequest(sending) {
-  return { type: USER_SENDING_REQUEST, sending };
+  return { type: types.USER_SENDING_REQUEST, sending };
 }
 
 /**
@@ -46,14 +38,14 @@ export function sendingRequest(sending) {
  * @param  {string} data.password The password of the user to log in
  */
 export function loginRequest(data) {
-  return { type: USER_LOGIN_REQUEST, data };
+  return { type: types.USER_LOGIN_REQUEST, data };
 }
 
 /**
  * Tells the app we want to log out a user
  */
 export function logout() {
-  return { type: USER_LOGOUT };
+  return { type: types.USER_LOGOUT };
 }
 
 /**
@@ -61,12 +53,12 @@ export function logout() {
  * @param  {object} error The error we got when trying to make the request
  */
 export function requestError(error) {
-  return { type: USER_REQUEST_ERROR, error };
+  return { type: types.USER_REQUEST_ERROR, error };
 }
 
 /**
  * Sets the `error` state as empty
  */
 export function clearError() {
-  return { type: USER_CLEAR_ERROR };
+  return { type: types.USER_CLEAR_ERROR };
 }

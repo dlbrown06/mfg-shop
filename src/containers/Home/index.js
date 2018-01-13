@@ -7,7 +7,12 @@ import "./index.css";
 
 class Home extends Component {
   componentDidMount() {
-    this.props.dispatch(loginRequest("testUser", "testPassword"));
+    this.props.dispatch(
+      loginRequest({
+        username: "testUser",
+        password: "testPassword"
+      })
+    );
   }
 
   render() {
