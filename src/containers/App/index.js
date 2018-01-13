@@ -1,8 +1,8 @@
 import React from "react";
 
-import AppContent from "../AppContent";
-import NavMain from "../NavMain";
-import NavLeftSide from "../NavLeftSide";
+import AppContent from "./AppContent";
+import NavMain from "./NavMain";
+import NavLeftSide from "./NavLeftSide";
 
 import "./index.css";
 

@@ -1,14 +1,19 @@
 {
   "plugins": ["prettier"],
   "extends": ["prettier"],
+  "env": {
+    "browser": true,
+    "es6": true
+  },
   "rules": {
     "prettier/prettier": "error"
   },
   "parserOptions": {
-    "ecmaVersion": 2016,
+    "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "experimentalObjectRestSpread": true
     }
   }
 }
