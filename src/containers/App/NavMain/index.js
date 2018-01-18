@@ -5,7 +5,11 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -44,12 +48,29 @@ class NavMain extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink
-                  href="https://github.com/dlbrown06/mfg-shop"
-                  target="_blank"
-                >
-                  Github
-                </NavLink>
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav caret>
+                    <i className="fa fa-book" /> Documentation
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem>
+                      <NavLink
+                        href="https://github.com/dlbrown06/mfg-shop"
+                        target="_blank"
+                      >
+                        <i className="fa fa-github" /> Github
+                      </NavLink>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <NavLink
+                        href="https://mfgshop.docs.apiary.io"
+                        target="_blank"
+                      >
+                        <i className="fa fa-code" /> Apiary
+                      </NavLink>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
               </NavItem>
             </Nav>
           </Collapse>

@@ -1,9 +1,12 @@
 import { combineReducers } from "redux";
-import user from "./userReducer";
+import { reducer as form } from "redux-form";
+
+import login from "./containers/Login/reducer";
 
 // Combines all reducers to a single reducer function
 const rootReducer = combineReducers({
-  user
+  form,
+  login
 });
 
 export default rootReducer;
